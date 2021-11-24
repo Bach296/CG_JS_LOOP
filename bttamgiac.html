@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ung dung Loop</title>
+</head>
+<body>
+<script>
+    /* VD1 */
+	/* let N = prompt('Nhap gia tri N')
+	N = parseInt(N)
+	for(i=0;i<N;i++) {
+		for(j=0;j<=i;j++) {
+			document.writeln(" * ");
+		}
+		document.writeln("<br/>")
+	} */
+
+    /* VD2 */
+    /* let N = prompt('Nhap gia tri N');
+	N = parseInt(N);
+	for(i=0;i<N;i++) {
+		for(j=0;j<N-i;j++) {
+			document.writeln(" * ");
+		}
+		document.writeln("<br/>");
+	} */
+
+    /* VD3 */
+    let N = prompt('Nhap gia tri N');
+	N = parseInt(N);
+	for(i=1;i<=N;i++) {
+		for(j=1;j<=N;j++) {
+            if (j > N-i){
+                document.writeln(" * ");
+                continue;
+            }
+			document.writeln(".");
+		}
+		document.writeln("<br/>");
+	}
+
+    /* VD4 */
+    /* let N = prompt('Nhap gia tri N');
+	N = parseInt(N);
+	for(i=1;i<=N;i++) {
+		for (j=1;j<=N;j++){
+            if(j<i) {
+                document.writeln(".");
+                continue;
+            }
+            document.writeln(" * ");
+        }
+        document.writeln("<br/>");
+	} */
+
+
+</script>
+</body>
+</html>
