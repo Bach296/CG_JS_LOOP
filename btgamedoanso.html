@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onClick="playGame()">Chơi</button>
+</body>
+ <script>
+        function playGame() {
+            let inputRange = prompt('Nhập vào khoảng số đoán: ');
+            let toNumRange = Number(inputRange);
+
+
+            // Tạo số ngẫu nhiên từ 0 đến inputRange
+            let randomNumber = Math.ceil(Math.random() * toNumRange);
+            document.write(randomNumber);
+
+            for (let i = 0; i < 3; i++) {
+                let guestNum = prompt("Nhập vào số bạn muốn đoán: ");
+                let toNumGuest = Number(guestNum);
+                if (randomNumber == toNumGuest) {
+                    alert('Xin chúc mừng bạn đã dự đoán thành công!');
+                    break;
+                }
+            }
+        }
+    </script>
+</html>
